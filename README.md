@@ -1,492 +1,484 @@
-# \# TripGenius ✈️
+\# TripGenius ✈️
 
-# 
 
-# An AI-Powered Itinerary Generator \& Travel Optimizer built with Flutter and PHP.
 
-# 
+An AI-Powered Itinerary Generator \& Travel Optimizer built with Flutter and PHP.
 
-# \## Features
 
-# 
 
-# \- 🤖 AI-generated travel itineraries powered by Google Gemini
+\## Features
 
-# \- 🔐 User authentication with JWT
 
-# \- 🗺️ Destination search and exploration
 
-# \- 📅 Day-by-day trip planning (Morning / Afternoon / Evening)
+\- 🤖 AI-generated travel itineraries powered by Google Gemini
 
-# \- 💰 Budget planning and expense tracking
+\- 🔐 User authentication with JWT
 
-# \- 🏨 Accommodation suggestions
+\- 🗺️ Destination search and exploration
 
-# \- 🚌 Transportation information
+\- 📅 Day-by-day trip planning (Morning / Afternoon / Evening)
 
-# \- ❤️ Wishlist / Favorites
+\- 💰 Budget planning and expense tracking
 
-# \- 💾 Save and manage trips
+\- 🏨 Accommodation suggestions
 
-# \- 👤 User profile management
+\- 🚌 Transportation information
 
-# 
+\- ❤️ Wishlist / Favorites
 
-# \## Tech Stack
+\- 💾 Save and manage trips
 
-# 
+\- 👤 User profile management
 
-# | Layer | Technology |
 
-# |---|---|
 
-# | Frontend | Flutter (iOS \& Android) |
+\## Tech Stack
 
-# | Backend | PHP (Pure / Custom REST API) |
 
-# | Database | MySQL |
 
-# | AI | Google Gemini 2.0 Flash |
+| Layer | Technology |
 
-# | Auth | JWT (JSON Web Tokens) |
+|---|---|
 
-# 
+| Frontend | Flutter (iOS \& Android) |
 
-# \## Project Structure
+| Backend | PHP (Pure / Custom REST API) |
 
-# tripgenius/
+| Database | MySQL |
 
-# ├── lib/
+| AI | Google Gemini 2.0 Flash |
 
-# │   ├── main.dart
+| Auth | JWT (JSON Web Tokens) |
 
-# │   ├── models/
 
-# │   │   ├── itinerary.dart
 
-# │   │   ├── trip\_input.dart
+\## Project Structure
 
-# │   │   └── user.dart
+tripgenius/
 
-# │   ├── screens/
+├── lib/
 
-# │   │   ├── login\_screen.dart
+│   ├── main.dart
 
-# │   │   ├── register\_screen.dart
+│   ├── models/
 
-# │   │   ├── trip\_builder\_screen.dart
+│   │   ├── itinerary.dart
 
-# │   │   ├── itinerary\_screen.dart
+│   │   ├── trip\_input.dart
 
-# │   │   ├── saved\_trips\_screen.dart
+│   │   └── user.dart
 
-# │   │   ├── search\_screen.dart
+│   ├── screens/
 
-# │   │   ├── destination\_detail\_screen.dart
+│   │   ├── login\_screen.dart
 
-# │   │   ├── wishlist\_screen.dart
+│   │   ├── register\_screen.dart
 
-# │   │   ├── profile\_screen.dart
+│   │   ├── trip\_builder\_screen.dart
 
-# │   │   └── budget\_screen.dart
+│   │   ├── itinerary\_screen.dart
 
-# │   └── services/
+│   │   ├── saved\_trips\_screen.dart
 
-# │       ├── api\_service.dart
+│   │   ├── search\_screen.dart
 
-# │       ├── auth\_service.dart
+│   │   ├── destination\_detail\_screen.dart
 
-# │       └── storage\_service.dart
+│   │   ├── wishlist\_screen.dart
 
-# └── backend/
+│   │   ├── profile\_screen.dart
 
-# ├── auth.php
+│   │   └── budget\_screen.dart
 
-# ├── generate.php
+│   └── services/
 
-# ├── trips.php
+│       ├── api\_service.dart
 
-# ├── destinations.php
+│       ├── auth\_service.dart
 
-# ├── wishlist.php
+│       └── storage\_service.dart
 
-# ├── budget.php
+└── backend/
 
-# └── transport.php
+├── auth.php
 
-# 
+├── generate.php
 
-# \## Getting Started
+├── trips.php
 
-# 
+├── destinations.php
 
-# \### Prerequisites
+├── wishlist.php
 
-# 
+├── budget.php
 
-# \- Flutter SDK 3.0+
+└── transport.php
 
-# \- PHP 8.0+
 
-# \- MySQL 5.7+
 
-# \- Laragon or XAMPP
+\## Getting Started
 
-# \- Google Gemini API Key
 
-# 
 
-# \### Backend Setup
+\### Prerequisites
 
-# 
 
-# 1\. Install \[Laragon](https://laragon.org/) or \[XAMPP](https://www.apachefriends.org/)
 
-# 2\. Copy the `backend/` folder to your web server root:
+\- Flutter SDK 3.0+
 
-# &#x20;  - Laragon: `C:\\laragon\\www\\tripgenius\\`
+\- PHP 8.0+
 
-# &#x20;  - XAMPP: `C:\\xampp\\htdocs\\tripgenius\\`
+\- MySQL 5.7+
 
-# 3\. Create `config.php` from the template:
+\- Laragon or XAMPP
 
-# 
+\- Google Gemini API Key
 
-# ```php
 
-# <?php
 
-# define('GEMINI\_API\_KEY', 'your\_gemini\_api\_key\_here');
+\### Backend Setup
 
-# define('GEMINI\_URL', 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent');
 
-# define('JWT\_SECRET', 'your\_jwt\_secret\_here');
 
-# define('DB\_HOST', 'localhost');
+1\. Install \[Laragon](https://laragon.org/) or \[XAMPP](https://www.apachefriends.org/)
 
-# define('DB\_USER', 'root');
+2\. Copy the `backend/` folder to your web server root:
 
-# define('DB\_PASS', '');
+&#x20;  - Laragon: `C:\\laragon\\www\\tripgenius\\`
 
-# define('DB\_NAME', 'tripgenius');
+&#x20;  - XAMPP: `C:\\xampp\\htdocs\\tripgenius\\`
 
-# ```
+3\. Create `config.php` from the template:
 
-# 
 
-# 4\. Import the database schema:
 
-# 
+```php
 
-# ```sql
+<?php
 
-# CREATE DATABASE tripgenius;
+define('GEMINI\_API\_KEY', 'your\_gemini\_api\_key\_here');
 
-# USE tripgenius;
+define('GEMINI\_URL', 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent');
 
-# 
+define('JWT\_SECRET', 'your\_jwt\_secret\_here');
 
-# CREATE TABLE users (
+define('DB\_HOST', 'localhost');
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+define('DB\_USER', 'root');
 
-# &#x20; name VARCHAR(100) NOT NULL,
+define('DB\_PASS', '');
 
-# &#x20; email VARCHAR(150) UNIQUE NOT NULL,
+define('DB\_NAME', 'tripgenius');
 
-# &#x20; password VARCHAR(255) NOT NULL,
+```
 
-# &#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP
 
-# );
 
-# 
+4\. Import the database schema:
 
-# CREATE TABLE trips (
 
-# &#x20; id VARCHAR(100) PRIMARY KEY,
 
-# &#x20; user\_id INT NOT NULL,
+```sql
 
-# &#x20; destination VARCHAR(150) NOT NULL,
+CREATE DATABASE tripgenius;
 
-# &#x20; days INT NOT NULL,
+USE tripgenius;
 
-# &#x20; interests TEXT,
 
-# &#x20; budget VARCHAR(20),
 
-# &#x20; plan LONGTEXT NOT NULL,
+CREATE TABLE users (
 
-# &#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP,
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# &#x20; FOREIGN KEY (user\_id) REFERENCES users(id) ON DELETE CASCADE
+&#x20; name VARCHAR(100) NOT NULL,
 
-# );
+&#x20; email VARCHAR(150) UNIQUE NOT NULL,
 
-# 
+&#x20; password VARCHAR(255) NOT NULL,
 
-# CREATE TABLE destinations (
+&#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+);
 
-# &#x20; name VARCHAR(150) NOT NULL,
 
-# &#x20; country VARCHAR(100),
 
-# &#x20; description TEXT,
+CREATE TABLE trips (
 
-# &#x20; image\_url VARCHAR(255),
+&#x20; id VARCHAR(100) PRIMARY KEY,
 
-# &#x20; category VARCHAR(50)
+&#x20; user\_id INT NOT NULL,
 
-# );
+&#x20; destination VARCHAR(150) NOT NULL,
 
-# 
+&#x20; days INT NOT NULL,
 
-# CREATE TABLE attractions (
+&#x20; interests TEXT,
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+&#x20; budget VARCHAR(20),
 
-# &#x20; destination\_id INT NOT NULL,
+&#x20; plan LONGTEXT NOT NULL,
 
-# &#x20; name VARCHAR(150) NOT NULL,
+&#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP,
 
-# &#x20; description TEXT,
+&#x20; FOREIGN KEY (user\_id) REFERENCES users(id) ON DELETE CASCADE
 
-# &#x20; category VARCHAR(50),
+);
 
-# &#x20; FOREIGN KEY (destination\_id) REFERENCES destinations(id)
 
-# );
 
-# 
+CREATE TABLE destinations (
 
-# CREATE TABLE accommodation (
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+&#x20; name VARCHAR(150) NOT NULL,
 
-# &#x20; destination\_id INT NOT NULL,
+&#x20; country VARCHAR(100),
 
-# &#x20; name VARCHAR(150) NOT NULL,
+&#x20; description TEXT,
 
-# &#x20; type VARCHAR(50),
+&#x20; image\_url VARCHAR(255),
 
-# &#x20; price\_range VARCHAR(50),
+&#x20; category VARCHAR(50)
 
-# &#x20; description TEXT,
+);
 
-# &#x20; FOREIGN KEY (destination\_id) REFERENCES destinations(id)
 
-# );
 
-# 
+CREATE TABLE attractions (
 
-# CREATE TABLE transport (
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+&#x20; destination\_id INT NOT NULL,
 
-# &#x20; from\_destination VARCHAR(150) NOT NULL,
+&#x20; name VARCHAR(150) NOT NULL,
 
-# &#x20; to\_destination VARCHAR(150) NOT NULL,
+&#x20; description TEXT,
 
-# &#x20; mode VARCHAR(50),
+&#x20; category VARCHAR(50),
 
-# &#x20; duration VARCHAR(50),
+&#x20; FOREIGN KEY (destination\_id) REFERENCES destinations(id)
 
-# &#x20; price\_range VARCHAR(50),
+);
 
-# &#x20; description TEXT
 
-# );
 
-# 
+CREATE TABLE accommodation (
 
-# CREATE TABLE budgets (
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+&#x20; destination\_id INT NOT NULL,
 
-# &#x20; trip\_id VARCHAR(100) NOT NULL,
+&#x20; name VARCHAR(150) NOT NULL,
 
-# &#x20; user\_id INT NOT NULL,
+&#x20; type VARCHAR(50),
 
-# &#x20; accommodation DECIMAL(10,2) DEFAULT 0,
+&#x20; price\_range VARCHAR(50),
 
-# &#x20; food DECIMAL(10,2) DEFAULT 0,
+&#x20; description TEXT,
 
-# &#x20; transport DECIMAL(10,2) DEFAULT 0,
+&#x20; FOREIGN KEY (destination\_id) REFERENCES destinations(id)
 
-# &#x20; attractions DECIMAL(10,2) DEFAULT 0,
+);
 
-# &#x20; others DECIMAL(10,2) DEFAULT 0,
 
-# &#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP,
 
-# &#x20; FOREIGN KEY (trip\_id) REFERENCES trips(id) ON DELETE CASCADE,
+CREATE TABLE transport (
 
-# &#x20; FOREIGN KEY (user\_id) REFERENCES users(id) ON DELETE CASCADE
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# );
+&#x20; from\_destination VARCHAR(150) NOT NULL,
 
-# 
+&#x20; to\_destination VARCHAR(150) NOT NULL,
 
-# CREATE TABLE wishlist (
+&#x20; mode VARCHAR(50),
 
-# &#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
+&#x20; duration VARCHAR(50),
 
-# &#x20; user\_id INT NOT NULL,
+&#x20; price\_range VARCHAR(50),
 
-# &#x20; destination\_id INT NOT NULL,
+&#x20; description TEXT
 
-# &#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP,
+);
 
-# &#x20; FOREIGN KEY (user\_id) REFERENCES users(id) ON DELETE CASCADE,
 
-# &#x20; FOREIGN KEY (destination\_id) REFERENCES destinations(id) ON DELETE CASCADE
 
-# );
+CREATE TABLE budgets (
 
-# ```
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# 
+&#x20; trip\_id VARCHAR(100) NOT NULL,
 
-# \### Flutter Setup
+&#x20; user\_id INT NOT NULL,
 
-# 
+&#x20; accommodation DECIMAL(10,2) DEFAULT 0,
 
-# 1\. Clone the repository:
+&#x20; food DECIMAL(10,2) DEFAULT 0,
 
-# ```bash
+&#x20; transport DECIMAL(10,2) DEFAULT 0,
 
-# git clone https://github.com/yourusername/tripgenius.git
+&#x20; attractions DECIMAL(10,2) DEFAULT 0,
 
-# cd tripgenius
+&#x20; others DECIMAL(10,2) DEFAULT 0,
 
-# ```
+&#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP,
 
-# 
+&#x20; FOREIGN KEY (trip\_id) REFERENCES trips(id) ON DELETE CASCADE,
 
-# 2\. Install dependencies:
+&#x20; FOREIGN KEY (user\_id) REFERENCES users(id) ON DELETE CASCADE
 
-# ```bash
+);
 
-# flutter pub get
 
-# ```
 
-# 
+CREATE TABLE wishlist (
 
-# 3\. Update the API base URL in `lib/services/auth\_service.dart` and `lib/services/api\_service.dart`:
+&#x20; id INT AUTO\_INCREMENT PRIMARY KEY,
 
-# ```dart
+&#x20; user\_id INT NOT NULL,
 
-# // For emulator
+&#x20; destination\_id INT NOT NULL,
 
-# static const String baseUrl = 'http://10.0.2.2/tripgenius';
+&#x20; created\_at TIMESTAMP DEFAULT CURRENT\_TIMESTAMP,
 
-# 
+&#x20; FOREIGN KEY (user\_id) REFERENCES users(id) ON DELETE CASCADE,
 
-# // For Chrome testing
+&#x20; FOREIGN KEY (destination\_id) REFERENCES destinations(id) ON DELETE CASCADE
 
-# static const String baseUrl = 'http://127.0.0.1/tripgenius';
+);
 
-# 
+```
 
-# // For real device (use your PC's local IP)
 
-# static const String baseUrl = 'http://192.168.x.x/tripgenius';
 
-# ```
+\### Flutter Setup
 
-# 
 
-# 4\. Run the app:
 
-# ```bash
+1\. Clone the repository:
 
-# \# Chrome (for testing)
+```bash
 
-# flutter run -d chrome --web-browser-flag "--disable-web-security"
+git clone https://github.com/yourusername/tripgenius.git
 
-# 
+cd tripgenius
 
-# \# Android emulator
+```
 
-# flutter run -d emulator-5554
 
-# 
 
-# \# Real device
+2\. Install dependencies:
 
-# flutter run
+```bash
 
-# ```
+flutter pub get
 
-# 
+```
 
-# \## API Endpoints
 
-# 
 
-# | Method | Endpoint | Description | Auth |
+3\. Update the API base URL in `lib/services/auth\_service.dart` and `lib/services/api\_service.dart`:
 
-# |---|---|---|---|
+```dart
 
-# | POST | `/auth.php?action=register` | Register new user | No |
+// For emulator
 
-# | POST | `/auth.php?action=login` | Login user | No |
+static const String baseUrl = 'http://10.0.2.2/tripgenius';
 
-# | GET | `/auth.php?action=profile` | Get user profile | Yes |
 
-# | PUT | `/auth.php?action=profile` | Update profile | Yes |
 
-# | POST | `/generate.php` | Generate AI itinerary | Yes |
+// For Chrome testing
 
-# | GET | `/trips.php` | Get saved trips | Yes |
+static const String baseUrl = 'http://127.0.0.1/tripgenius';
 
-# | POST | `/trips.php` | Save a trip | Yes |
 
-# | DELETE | `/trips.php?id=` | Delete a trip | Yes |
 
-# | GET | `/destinations.php` | List destinations | No |
+// For real device (use your PC's local IP)
 
-# | GET | `/destinations.php?id=` | Destination detail | No |
+static const String baseUrl = 'http://192.168.x.x/tripgenius';
 
-# | GET | `/destinations.php?search=` | Search destinations | No |
+```
 
-# | GET | `/wishlist.php` | Get wishlist | Yes |
 
-# | POST | `/wishlist.php` | Add to wishlist | Yes |
 
-# | DELETE | `/wishlist.php?id=` | Remove from wishlist | Yes |
+4\. Run the app:
 
-# | GET | `/budget.php?trip\_id=` | Get trip budget | Yes |
+```bash
 
-# | POST | `/budget.php` | Save budget | Yes |
+\# Chrome (for testing)
 
-# | GET | `/transport.php` | Get transport info | No |
+flutter run -d chrome --web-browser-flag "--disable-web-security"
 
-# 
 
-# \## Screenshots
 
-# 
+\# Android emulator
 
-# > Coming soon
+flutter run -d emulator-5554
 
-# 
 
-# \## License
 
-# 
+\# Real device
 
-# MIT License — feel free to use and modify.
+flutter run
 
-# 
+```
 
-# \## Developer
 
-# 
 
-# Built with ❤️ using Flutter + PHP + Gemini AI
+\## API Endpoints
+
+
+
+| Method | Endpoint | Description | Auth |
+
+|---|---|---|---|
+
+| POST | `/auth.php?action=register` | Register new user | No |
+
+| POST | `/auth.php?action=login` | Login user | No |
+
+| GET | `/auth.php?action=profile` | Get user profile | Yes |
+
+| PUT | `/auth.php?action=profile` | Update profile | Yes |
+
+| POST | `/generate.php` | Generate AI itinerary | Yes |
+
+| GET | `/trips.php` | Get saved trips | Yes |
+
+| POST | `/trips.php` | Save a trip | Yes |
+
+| DELETE | `/trips.php?id=` | Delete a trip | Yes |
+
+| GET | `/destinations.php` | List destinations | No |
+
+| GET | `/destinations.php?id=` | Destination detail | No |
+
+| GET | `/destinations.php?search=` | Search destinations | No |
+
+| GET | `/wishlist.php` | Get wishlist | Yes |
+
+| POST | `/wishlist.php` | Add to wishlist | Yes |
+
+| DELETE | `/wishlist.php?id=` | Remove from wishlist | Yes |
+
+| GET | `/budget.php?trip\_id=` | Get trip budget | Yes |
+
+| POST | `/budget.php` | Save budget | Yes |
+
+| GET | `/transport.php` | Get transport info | No |
+
+
+
+\## Screenshots
+
+
+
+> Coming soon
+
+
+
+\## Developer
+
+
+
+Built with ❤️ using Flutter + PHP + Gemini AI
 
