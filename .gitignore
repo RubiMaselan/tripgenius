@@ -28,6 +28,10 @@ ios/Flutter/flutter_export_environment.sh
 ios/Flutter/Generated.xcconfig
 ios/Pods/
 ios/Runner.xcworkspace/
+ios/Runner/GeneratedPluginRegistrant.h
+ios/Runner/GeneratedPluginRegistrant.m
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
 
 # VS Code
 .vscode/
